@@ -1,0 +1,48 @@
+type User @table {
+  email: String!
+  passwordHash: String!
+  role: String!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  address: String
+}
+
+type PCMProfile @table {
+  user: User!
+  dateOfBirth: Date!
+  gender: String!
+  academicQualification: String!
+  institutionAttended: String!
+  courseOfStudy: String!
+  medicalHistory: String
+  emergencyContactName: String
+  emergencyContactNumber: String
+}
+
+type Preference @table {
+  pcmProfile: PCMProfile!
+  preferenceType: String!
+  value: String!
+  priority: Int!
+  notes: String
+}
+
+type DeploymentLocation @table {
+  name: String!
+  state: String!
+  sector: String!
+  description: String
+  capacity: Int
+}
+
+type Assignment @table {
+  pcmProfile: PCMProfile!
+  deploymentLocation: DeploymentLocation!
+  assignmentDate: Timestamp!
+  status: String!
+  organizationAssigned: String
+  startDate: Date
+  endDate: Date
+  adminNotes: String
+}

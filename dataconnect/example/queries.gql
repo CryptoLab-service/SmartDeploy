@@ -1,0 +1,36 @@
+mutation CreateNewUser($email: String!, $passwordHash: String!, $role: String!) @auth(level: USER) {
+  user_insert(data: {email: $email, passwordHash: $passwordHash, role: $role})
+}
+
+query GetDeploymentLocations @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  deploymentLocations {
+    id
+    name
+    sector
+    state
+    capacity
+    description
+  }
+}
+
+mutation UpdatePCMProfile($id: UUID!, $academicQualification: String, $courseOfStudy: String, $dateOfBirth: Date, $emergencyContactName: String, $emergencyContactNumber: String, $gender: String, $institutionAttended: String, $medicalHistory: String) @auth(level: USER) {
+  pCMProfile_update(key: {id: $id}, data: {academicQualification: $academicQualification, courseOfStudy: $courseOfStudy, dateOfBirth: $dateOfBirth, emergencyContactName: $emergencyContactName, emergencyContactNumber: $emergencyContactNumber, gender: $gender, institutionAttended: $institutionAttended, medicalHistory: $medicalHistory})
+}
+
+query GetAssignmentsForPCMProfile($pcmProfileId: UUID!) @auth(level: USER) {
+  assignments(where: {pcmProfileId: {eq: $pcmProfileId}}) {
+    id
+    deploymentLocation {
+      id
+      name
+      sector
+      state
+    }
+    assignmentDate
+    endDate
+    organizationAssigned
+    startDate
+    status
+    adminNotes
+  }
+}

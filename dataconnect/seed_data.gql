@@ -1,0 +1,110 @@
+mutation SeedData @transaction @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      address: "123 Main St",
+      email: "test1@example.com",
+      firstName: "John",
+      lastName: "Doe",
+      passwordHash: "passwordhash1",
+      phoneNumber: "555-123-4567",
+      role: "admin"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      address: "456 Elm St",
+      email: "test2@example.com",
+      firstName: "Jane",
+      lastName: "Smith",
+      passwordHash: "passwordhash2",
+      phoneNumber: "555-987-6543",
+      role: "user"
+    }
+  ])
+  deploymentLocation_insertMany(data: [
+    {
+      id: "650e8400-e29b-41d4-a716-446655440000",
+      capacity: 50,
+      description: "Main office location",
+      name: "Headquarters",
+      sector: "Technology",
+      state: "CA"
+    },
+    {
+      id: "650e8400-e29b-41d4-a716-446655440001",
+      capacity: 100,
+      description: "Remote office location",
+      name: "Branch Office",
+      sector: "Technology",
+      state: "NY"
+    }
+  ])
+  pCMProfile_insertMany(data: [
+    {
+      id: "750e8400-e29b-41d4-a716-446655440000",
+      userId: "550e8400-e29b-41d4-a716-446655440000",
+      academicQualification: "BSc",
+      courseOfStudy: "Computer Science",
+      dateOfBirth: "1990-01-01",
+      emergencyContactName: "Parent1",
+      emergencyContactNumber: "555-111-2222",
+      gender: "Male",
+      institutionAttended: "University A",
+      medicalHistory: "None"
+    },
+    {
+      id: "750e8400-e29b-41d4-a716-446655440001",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      academicQualification: "MSc",
+      courseOfStudy: "Data Science",
+      dateOfBirth: "1992-02-02",
+      emergencyContactName: "Parent2",
+      emergencyContactNumber: "555-333-4444",
+      gender: "Female",
+      institutionAttended: "University B",
+      medicalHistory: "Allergic to nuts"
+    }
+  ])
+  assignment_insertMany(data: [
+    {
+      id: "850e8400-e29b-41d4-a716-446655440000",
+      deploymentLocationId: "650e8400-e29b-41d4-a716-446655440000",
+      pcmProfileId: "750e8400-e29b-41d4-a716-446655440000",
+      adminNotes: "Good performance",
+      assignmentDate: "2024-01-15T00:00:00Z",
+      endDate: "2024-12-31",
+      organizationAssigned: "Org X",
+      startDate: "2024-01-01",
+      status: "Active"
+    },
+    {
+      id: "850e8400-e29b-41d4-a716-446655440001",
+      deploymentLocationId: "650e8400-e29b-41d4-a716-446655440001",
+      pcmProfileId: "750e8400-e29b-41d4-a716-446655440001",
+      adminNotes: "Needs improvement",
+      assignmentDate: "2024-02-15T00:00:00Z",
+      endDate: "2024-12-31",
+      organizationAssigned: "Org Y",
+      startDate: "2024-02-01",
+      status: "Pending"
+    }
+  ])
+  preference_insertMany(data: [
+    {
+      id: "950e8400-e29b-41d4-a716-446655440000",
+      pcmProfileId: "750e8400-e29b-41d4-a716-446655440000",
+      notes: "Prefers working from home",
+      preferenceType: "Work Location",
+      priority: 1,
+      value: "Remote"
+    },
+    {
+      id: "950e8400-e29b-41d4-a716-446655440001",
+      pcmProfileId: "750e8400-e29b-41d4-a716-446655440001",
+      notes: "Prefers working in the office",
+      preferenceType: "Work Location",
+      priority: 1,
+      value: "Office"
+    }
+  ])
+}

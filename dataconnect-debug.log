@@ -1,0 +1,16 @@
+I1206 14:03:18.257876   56667 load.go:31] Reloading schema and connectors...
+I1206 14:03:18.399225   56667 control.go:94] [/emulator/studio 1fc0] UpdateResources(): done
+Main schema: sources: schema/schema.gql [899B] 
+Connector "example": sources: example/queries.gql [1329B] 
+I1206 14:03:18.484572   56667 codegen.go:80] [connector "example" javascriptSdk] Generating sources into "/home/user/studio/src/dataconnect-generated"
+I1206 14:03:18.525020   56667 codegen.go:80] [connector "example" adminSdk] Generating sources into "/home/user/studio/functions/src/dataconnect-admin-generated"
+I1206 14:03:18.532211   56667 collector.go:107] schema extensions wrote into "/home/user/studio/dataconnect/.dataconnect/schema"
+Generated sources: main/mutation.gql [17715B] main/implicit.gql [2387B] main/input.gql [50855B] prelude.gql [73219B] main/relation.gql [24153B] main/query.gql [6518B] 
+I1206 14:03:18.535941   56667 collector.go:107] connector "example" javascriptSdk wrote into "/home/user/studio/src/dataconnect-generated"
+Generated sources: react/README.md [29869B] .guides/setup.md [1682B] index.cjs.js [2273B] package.json [863B] react/esm/package.json [17B] .guides/config.json [236B] esm/index.esm.js [1931B] esm/package.json [17B] README.md [24433B] .guides/usage.md [2552B] index.d.ts [5110B] react/index.d.ts [2362B] react/package.json [460B] react/index.cjs.js [1827B] react/esm/index.esm.js [1713B] 
+I1206 14:03:18.557465   56667 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I1206 14:03:18.558193   56667 collector.go:107] connector "example" adminSdk wrote into "/home/user/studio/functions/src/dataconnect-admin-generated"
+Generated sources: index.d.ts [4672B] esm/index.esm.js [1507B] esm/package.json [17B] index.cjs.js [1728B] package.json [632B] 
+I1206 14:03:18.576239   56667 installsdk.go:86] Running command: /usr/bin/npm install file:src/dataconnect-admin-generated
+I1206 14:03:23.023916   56667 load.go:109] Finished reloading
+I1206 14:03:23.076995   56667 dev.go:105] Listening on address (HTTP + gRPC): 127.0.0.1:9399

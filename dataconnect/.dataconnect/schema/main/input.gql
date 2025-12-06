@@ -1,0 +1,1673 @@
+"""
+✨ `Assignment_KeyOutput` returns the primary key fields of table type `Assignment`.
+
+It has the same format as `Assignment_Key`, but is only used as mutation return value.
+"""
+scalar Assignment_KeyOutput
+"""
+✨ `DeploymentLocation_KeyOutput` returns the primary key fields of table type `DeploymentLocation`.
+
+It has the same format as `DeploymentLocation_Key`, but is only used as mutation return value.
+"""
+scalar DeploymentLocation_KeyOutput
+"""
+✨ `PCMProfile_KeyOutput` returns the primary key fields of table type `PCMProfile`.
+
+It has the same format as `PCMProfile_Key`, but is only used as mutation return value.
+"""
+scalar PCMProfile_KeyOutput
+"""
+✨ `Preference_KeyOutput` returns the primary key fields of table type `Preference`.
+
+It has the same format as `Preference_Key`, but is only used as mutation return value.
+"""
+scalar Preference_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ Generated data input type for table 'Assignment'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Assignment_Data {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Assignment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocationId` of type `UUID!`
+  """
+  deploymentLocationId: UUID
+  """
+  ✨ `_expr` server value variant of `deploymentLocationId` (✨ Generated from Field `Assignment`.`deploymentLocationId` of type `UUID!`)
+  """
+  deploymentLocationId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `pcmProfileId` (✨ Generated from Field `Assignment`.`pcmProfileId` of type `UUID!`)
+  """
+  pcmProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocation` of type `DeploymentLocation!`
+  """
+  deploymentLocation: DeploymentLocation_Key
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Key
+  """
+  ✨ Generated from Field `Assignment`.`adminNotes` of type `String`
+  """
+  adminNotes: String
+  """
+  ✨ `_expr` server value variant of `adminNotes` (✨ Generated from Field `Assignment`.`adminNotes` of type `String`)
+  """
+  adminNotes_expr: String_Expr
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`
+  """
+  assignmentDate: Timestamp
+  """
+  ✨ `_expr` server value variant of `assignmentDate` (✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`)
+  """
+  assignmentDate_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `assignmentDate` (✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`)
+  """
+  assignmentDate_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `assignmentDate` (✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`)
+  """
+  assignmentDate_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`endDate` of type `Date`
+  """
+  endDate: Date
+  """
+  ✨ `_date` server value variant of `endDate` (✨ Generated from Field `Assignment`.`endDate` of type `Date`)
+  """
+  endDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `endDate` (✨ Generated from Field `Assignment`.`endDate` of type `Date`)
+  """
+  endDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `endDate` (✨ Generated from Field `Assignment`.`endDate` of type `Date`)
+  """
+  endDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`organizationAssigned` of type `String`
+  """
+  organizationAssigned: String
+  """
+  ✨ `_expr` server value variant of `organizationAssigned` (✨ Generated from Field `Assignment`.`organizationAssigned` of type `String`)
+  """
+  organizationAssigned_expr: String_Expr
+  """
+  ✨ Generated from Field `Assignment`.`startDate` of type `Date`
+  """
+  startDate: Date
+  """
+  ✨ `_date` server value variant of `startDate` (✨ Generated from Field `Assignment`.`startDate` of type `Date`)
+  """
+  startDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `startDate` (✨ Generated from Field `Assignment`.`startDate` of type `Date`)
+  """
+  startDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `startDate` (✨ Generated from Field `Assignment`.`startDate` of type `Date`)
+  """
+  startDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Assignment`.`status` of type `String!`
+  """
+  status: String
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Assignment`.`status` of type `String!`)
+  """
+  status_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Assignment'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Assignment_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Assignment_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Assignment_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Assignment_Filter!]
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocationId` of type `UUID!`
+  """
+  deploymentLocationId: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: UUID_Filter
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocation` of type `DeploymentLocation!`
+  """
+  deploymentLocation: DeploymentLocation_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Filter
+  """
+  ✨ Generated from Field `Assignment`.`adminNotes` of type `String`
+  """
+  adminNotes: String_Filter
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`
+  """
+  assignmentDate: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`endDate` of type `Date`
+  """
+  endDate: Date_Filter
+  """
+  ✨ Generated from Field `Assignment`.`organizationAssigned` of type `String`
+  """
+  organizationAssigned: String_Filter
+  """
+  ✨ Generated from Field `Assignment`.`startDate` of type `Date`
+  """
+  startDate: Date_Filter
+  """
+  ✨ Generated from Field `Assignment`.`status` of type `String!`
+  """
+  status: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Assignment'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Assignment_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Assignment_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Assignment_Filter
+}
+"""
+✨ Generated having input type for table 'Assignment'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Assignment_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Assignment_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Assignment_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Assignment_Having!]
+  """
+  ✨ Generated from Field `Assignment`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`adminNotes_count` of type `Int!`
+  """
+  adminNotes_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_count` of type `Int!`
+  """
+  assignmentDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocationId_count` of type `Int!`
+  """
+  deploymentLocationId_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`endDate_count` of type `Int!`
+  """
+  endDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`organizationAssigned_count` of type `Int!`
+  """
+  organizationAssigned_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfileId_count` of type `Int!`
+  """
+  pcmProfileId_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`startDate_count` of type `Int!`
+  """
+  startDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_min` of type `Timestamp`
+  """
+  assignmentDate_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`endDate_min` of type `Date`
+  """
+  endDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Assignment`.`startDate_min` of type `Date`
+  """
+  startDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_max` of type `Timestamp`
+  """
+  assignmentDate_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Assignment`.`endDate_max` of type `Date`
+  """
+  endDate_max: Date_Filter
+  """
+  ✨ Generated from Field `Assignment`.`startDate_max` of type `Date`
+  """
+  startDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'Assignment'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Assignment_Key {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Assignment`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Assignment'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Assignment_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Assignment_Filter
+}
+"""
+✨ Generated order input type for table 'Assignment'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Assignment_Order {
+  """
+  ✨ Generated from Field `Assignment`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocationId` of type `UUID!`
+  """
+  deploymentLocationId: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocation` of type `DeploymentLocation!`
+  """
+  deploymentLocation: DeploymentLocation_Order
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Order
+  """
+  ✨ Generated from Field `Assignment`.`adminNotes` of type `String`
+  """
+  adminNotes: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate` of type `Timestamp!`
+  """
+  assignmentDate: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`endDate` of type `Date`
+  """
+  endDate: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`organizationAssigned` of type `String`
+  """
+  organizationAssigned: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`startDate` of type `Date`
+  """
+  startDate: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`status` of type `String!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`adminNotes_count` of type `Int!`
+  """
+  adminNotes_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_count` of type `Int!`
+  """
+  assignmentDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`deploymentLocationId_count` of type `Int!`
+  """
+  deploymentLocationId_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`endDate_count` of type `Int!`
+  """
+  endDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`organizationAssigned_count` of type `Int!`
+  """
+  organizationAssigned_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`pcmProfileId_count` of type `Int!`
+  """
+  pcmProfileId_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`startDate_count` of type `Int!`
+  """
+  startDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_min` of type `Timestamp`
+  """
+  assignmentDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`endDate_min` of type `Date`
+  """
+  endDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`startDate_min` of type `Date`
+  """
+  startDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`assignmentDate_max` of type `Timestamp`
+  """
+  assignmentDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`endDate_max` of type `Date`
+  """
+  endDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Assignment`.`startDate_max` of type `Date`
+  """
+  startDate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'DeploymentLocation'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input DeploymentLocation_Data {
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity` of type `Int`
+  """
+  capacity: Int
+  """
+  ✨ `_expr` server value variant of `capacity` (✨ Generated from Field `DeploymentLocation`.`capacity` of type `Int`)
+  """
+  capacity_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `capacity` (✨ Generated from Field `DeploymentLocation`.`capacity` of type `Int`)
+  """
+  capacity_update: [Int_Update!]
+  """
+  ✨ Generated from Field `DeploymentLocation`.`description` of type `String`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `DeploymentLocation`.`description` of type `String`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `DeploymentLocation`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `DeploymentLocation`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `DeploymentLocation`.`sector` of type `String!`
+  """
+  sector: String
+  """
+  ✨ `_expr` server value variant of `sector` (✨ Generated from Field `DeploymentLocation`.`sector` of type `String!`)
+  """
+  sector_expr: String_Expr
+  """
+  ✨ Generated from Field `DeploymentLocation`.`state` of type `String!`
+  """
+  state: String
+  """
+  ✨ `_expr` server value variant of `state` (✨ Generated from Field `DeploymentLocation`.`state` of type `String!`)
+  """
+  state_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'DeploymentLocation'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input DeploymentLocation_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [DeploymentLocation_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: DeploymentLocation_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [DeploymentLocation_Filter!]
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity` of type `Int`
+  """
+  capacity: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`description` of type `String`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`sector` of type `String!`
+  """
+  sector: String_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`state` of type `String!`
+  """
+  state: String_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`assignments_on_deploymentLocation` of type `[Assignment!]!`
+  """
+  assignments_on_deploymentLocation: Assignment_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'DeploymentLocation'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input DeploymentLocation_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [DeploymentLocation_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: DeploymentLocation_Filter
+}
+"""
+✨ Generated having input type for table 'DeploymentLocation'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input DeploymentLocation_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [DeploymentLocation_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: DeploymentLocation_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [DeploymentLocation_Having!]
+  """
+  ✨ Generated from Field `DeploymentLocation`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_count` of type `Int!`
+  """
+  capacity_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`name_count` of type `Int!`
+  """
+  name_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`sector_count` of type `Int!`
+  """
+  sector_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`state_count` of type `Int!`
+  """
+  state_count: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_sum` of type `Int`
+  """
+  capacity_sum: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_avg` of type `Float`
+  """
+  capacity_avg: Float_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_min` of type `Int`
+  """
+  capacity_min: Int_Filter
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_max` of type `Int`
+  """
+  capacity_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'DeploymentLocation'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input DeploymentLocation_Key {
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'DeploymentLocation'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input DeploymentLocation_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: DeploymentLocation_Filter
+}
+"""
+✨ Generated order input type for table 'DeploymentLocation'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input DeploymentLocation_Order {
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity` of type `Int`
+  """
+  capacity: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`description` of type `String`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`sector` of type `String!`
+  """
+  sector: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`state` of type `String!`
+  """
+  state: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_count` of type `Int!`
+  """
+  capacity_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`name_count` of type `Int!`
+  """
+  name_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`sector_count` of type `Int!`
+  """
+  sector_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`state_count` of type `Int!`
+  """
+  state_count: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_sum` of type `Int`
+  """
+  capacity_sum: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_avg` of type `Float`
+  """
+  capacity_avg: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_min` of type `Int`
+  """
+  capacity_min: OrderDirection
+  """
+  ✨ Generated from Field `DeploymentLocation`.`capacity_max` of type `Int`
+  """
+  capacity_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'PCMProfile'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input PCMProfile_Data {
+  """
+  ✨ Generated from Field `PCMProfile`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `PCMProfile`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `PCMProfile`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `PCMProfile`.`academicQualification` of type `String!`
+  """
+  academicQualification: String
+  """
+  ✨ `_expr` server value variant of `academicQualification` (✨ Generated from Field `PCMProfile`.`academicQualification` of type `String!`)
+  """
+  academicQualification_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`courseOfStudy` of type `String!`
+  """
+  courseOfStudy: String
+  """
+  ✨ `_expr` server value variant of `courseOfStudy` (✨ Generated from Field `PCMProfile`.`courseOfStudy` of type `String!`)
+  """
+  courseOfStudy_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`
+  """
+  dateOfBirth: Date
+  """
+  ✨ `_date` server value variant of `dateOfBirth` (✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`)
+  """
+  dateOfBirth_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `dateOfBirth` (✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`)
+  """
+  dateOfBirth_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `dateOfBirth` (✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`)
+  """
+  dateOfBirth_update: [Date_Update!]
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactName` of type `String`
+  """
+  emergencyContactName: String
+  """
+  ✨ `_expr` server value variant of `emergencyContactName` (✨ Generated from Field `PCMProfile`.`emergencyContactName` of type `String`)
+  """
+  emergencyContactName_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactNumber` of type `String`
+  """
+  emergencyContactNumber: String
+  """
+  ✨ `_expr` server value variant of `emergencyContactNumber` (✨ Generated from Field `PCMProfile`.`emergencyContactNumber` of type `String`)
+  """
+  emergencyContactNumber_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`gender` of type `String!`
+  """
+  gender: String
+  """
+  ✨ `_expr` server value variant of `gender` (✨ Generated from Field `PCMProfile`.`gender` of type `String!`)
+  """
+  gender_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`institutionAttended` of type `String!`
+  """
+  institutionAttended: String
+  """
+  ✨ `_expr` server value variant of `institutionAttended` (✨ Generated from Field `PCMProfile`.`institutionAttended` of type `String!`)
+  """
+  institutionAttended_expr: String_Expr
+  """
+  ✨ Generated from Field `PCMProfile`.`medicalHistory` of type `String`
+  """
+  medicalHistory: String
+  """
+  ✨ `_expr` server value variant of `medicalHistory` (✨ Generated from Field `PCMProfile`.`medicalHistory` of type `String`)
+  """
+  medicalHistory_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'PCMProfile'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input PCMProfile_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [PCMProfile_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: PCMProfile_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [PCMProfile_Filter!]
+  """
+  ✨ Generated from Field `PCMProfile`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`academicQualification` of type `String!`
+  """
+  academicQualification: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`courseOfStudy` of type `String!`
+  """
+  courseOfStudy: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`
+  """
+  dateOfBirth: Date_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactName` of type `String`
+  """
+  emergencyContactName: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactNumber` of type `String`
+  """
+  emergencyContactNumber: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`gender` of type `String!`
+  """
+  gender: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`institutionAttended` of type `String!`
+  """
+  institutionAttended: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`medicalHistory` of type `String`
+  """
+  medicalHistory: String_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`assignments_on_pcmProfile` of type `[Assignment!]!`
+  """
+  assignments_on_pcmProfile: Assignment_ListFilter
+  """
+  ✨ Generated from Field `PCMProfile`.`preferences_on_pcmProfile` of type `[Preference!]!`
+  """
+  preferences_on_pcmProfile: Preference_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'PCMProfile'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input PCMProfile_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [PCMProfile_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: PCMProfile_Filter
+}
+"""
+✨ Generated having input type for table 'PCMProfile'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input PCMProfile_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [PCMProfile_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: PCMProfile_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [PCMProfile_Having!]
+  """
+  ✨ Generated from Field `PCMProfile`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`academicQualification_count` of type `Int!`
+  """
+  academicQualification_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`courseOfStudy_count` of type `Int!`
+  """
+  courseOfStudy_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_count` of type `Int!`
+  """
+  dateOfBirth_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactName_count` of type `Int!`
+  """
+  emergencyContactName_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactNumber_count` of type `Int!`
+  """
+  emergencyContactNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`gender_count` of type `Int!`
+  """
+  gender_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`institutionAttended_count` of type `Int!`
+  """
+  institutionAttended_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`medicalHistory_count` of type `Int!`
+  """
+  medicalHistory_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_min` of type `Date`
+  """
+  dateOfBirth_min: Date_Filter
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_max` of type `Date`
+  """
+  dateOfBirth_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'PCMProfile'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input PCMProfile_Key {
+  """
+  ✨ Generated from Field `PCMProfile`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `PCMProfile`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'PCMProfile'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input PCMProfile_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: PCMProfile_Filter
+}
+"""
+✨ Generated order input type for table 'PCMProfile'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input PCMProfile_Order {
+  """
+  ✨ Generated from Field `PCMProfile`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `PCMProfile`.`academicQualification` of type `String!`
+  """
+  academicQualification: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`courseOfStudy` of type `String!`
+  """
+  courseOfStudy: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth` of type `Date!`
+  """
+  dateOfBirth: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactName` of type `String`
+  """
+  emergencyContactName: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactNumber` of type `String`
+  """
+  emergencyContactNumber: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`gender` of type `String!`
+  """
+  gender: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`institutionAttended` of type `String!`
+  """
+  institutionAttended: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`medicalHistory` of type `String`
+  """
+  medicalHistory: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`academicQualification_count` of type `Int!`
+  """
+  academicQualification_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`courseOfStudy_count` of type `Int!`
+  """
+  courseOfStudy_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_count` of type `Int!`
+  """
+  dateOfBirth_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactName_count` of type `Int!`
+  """
+  emergencyContactName_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`emergencyContactNumber_count` of type `Int!`
+  """
+  emergencyContactNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`gender_count` of type `Int!`
+  """
+  gender_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`institutionAttended_count` of type `Int!`
+  """
+  institutionAttended_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`medicalHistory_count` of type `Int!`
+  """
+  medicalHistory_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_min` of type `Date`
+  """
+  dateOfBirth_min: OrderDirection
+  """
+  ✨ Generated from Field `PCMProfile`.`dateOfBirth_max` of type `Date`
+  """
+  dateOfBirth_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Preference'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Preference_Data {
+  """
+  ✨ Generated from Field `Preference`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Preference`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Preference`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `pcmProfileId` (✨ Generated from Field `Preference`.`pcmProfileId` of type `UUID!`)
+  """
+  pcmProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Preference`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Key
+  """
+  ✨ Generated from Field `Preference`.`notes` of type `String`
+  """
+  notes: String
+  """
+  ✨ `_expr` server value variant of `notes` (✨ Generated from Field `Preference`.`notes` of type `String`)
+  """
+  notes_expr: String_Expr
+  """
+  ✨ Generated from Field `Preference`.`preferenceType` of type `String!`
+  """
+  preferenceType: String
+  """
+  ✨ `_expr` server value variant of `preferenceType` (✨ Generated from Field `Preference`.`preferenceType` of type `String!`)
+  """
+  preferenceType_expr: String_Expr
+  """
+  ✨ Generated from Field `Preference`.`priority` of type `Int!`
+  """
+  priority: Int
+  """
+  ✨ `_expr` server value variant of `priority` (✨ Generated from Field `Preference`.`priority` of type `Int!`)
+  """
+  priority_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `priority` (✨ Generated from Field `Preference`.`priority` of type `Int!`)
+  """
+  priority_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Preference`.`value` of type `String!`
+  """
+  value: String
+  """
+  ✨ `_expr` server value variant of `value` (✨ Generated from Field `Preference`.`value` of type `String!`)
+  """
+  value_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Preference'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Preference_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Preference_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Preference_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Preference_Filter!]
+  """
+  ✨ Generated from Field `Preference`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Preference`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: UUID_Filter
+  """
+  ✨ Generated from Field `Preference`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Filter
+  """
+  ✨ Generated from Field `Preference`.`notes` of type `String`
+  """
+  notes: String_Filter
+  """
+  ✨ Generated from Field `Preference`.`preferenceType` of type `String!`
+  """
+  preferenceType: String_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority` of type `Int!`
+  """
+  priority: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`value` of type `String!`
+  """
+  value: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Preference'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Preference_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Preference_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Preference_Filter
+}
+"""
+✨ Generated having input type for table 'Preference'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Preference_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Preference_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Preference_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Preference_Having!]
+  """
+  ✨ Generated from Field `Preference`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`notes_count` of type `Int!`
+  """
+  notes_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`pcmProfileId_count` of type `Int!`
+  """
+  pcmProfileId_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`preferenceType_count` of type `Int!`
+  """
+  preferenceType_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority_count` of type `Int!`
+  """
+  priority_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`value_count` of type `Int!`
+  """
+  value_count: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority_sum` of type `Int`
+  """
+  priority_sum: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority_avg` of type `Float`
+  """
+  priority_avg: Float_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority_min` of type `Int`
+  """
+  priority_min: Int_Filter
+  """
+  ✨ Generated from Field `Preference`.`priority_max` of type `Int`
+  """
+  priority_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Preference'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Preference_Key {
+  """
+  ✨ Generated from Field `Preference`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Preference`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Preference'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Preference_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Preference_Filter
+}
+"""
+✨ Generated order input type for table 'Preference'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Preference_Order {
+  """
+  ✨ Generated from Field `Preference`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`pcmProfileId` of type `UUID!`
+  """
+  pcmProfileId: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`pcmProfile` of type `PCMProfile!`
+  """
+  pcmProfile: PCMProfile_Order
+  """
+  ✨ Generated from Field `Preference`.`notes` of type `String`
+  """
+  notes: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`preferenceType` of type `String!`
+  """
+  preferenceType: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority` of type `Int!`
+  """
+  priority: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`value` of type `String!`
+  """
+  value: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`notes_count` of type `Int!`
+  """
+  notes_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`pcmProfileId_count` of type `Int!`
+  """
+  pcmProfileId_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`preferenceType_count` of type `Int!`
+  """
+  preferenceType_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority_count` of type `Int!`
+  """
+  priority_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`value_count` of type `Int!`
+  """
+  value_count: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority_sum` of type `Int`
+  """
+  priority_sum: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority_avg` of type `Float`
+  """
+  priority_avg: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority_min` of type `Int`
+  """
+  priority_min: OrderDirection
+  """
+  ✨ Generated from Field `Preference`.`priority_max` of type `Int`
+  """
+  priority_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: String
+  """
+  ✨ `_expr` server value variant of `address` (✨ Generated from Field `User`.`address` of type `String`)
+  """
+  address_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: String
+  """
+  ✨ `_expr` server value variant of `firstName` (✨ Generated from Field `User`.`firstName` of type `String`)
+  """
+  firstName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: String
+  """
+  ✨ `_expr` server value variant of `lastName` (✨ Generated from Field `User`.`lastName` of type `String`)
+  """
+  lastName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String
+  """
+  ✨ `_expr` server value variant of `passwordHash` (✨ Generated from Field `User`.`passwordHash` of type `String!`)
+  """
+  passwordHash_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String
+  """
+  ✨ `_expr` server value variant of `phoneNumber` (✨ Generated from Field `User`.`phoneNumber` of type `String`)
+  """
+  phoneNumber_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`role` of type `String!`
+  """
+  role: String
+  """
+  ✨ `_expr` server value variant of `role` (✨ Generated from Field `User`.`role` of type `String!`)
+  """
+  role_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: String_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: String_Filter
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: String_Filter
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String_Filter
+  """
+  ✨ Generated from Field `User`.`role` of type `String!`
+  """
+  role: String_Filter
+  """
+  ✨ Generated from Field `User`.`pCMProfiles_on_user` of type `[PCMProfile!]!`
+  """
+  pCMProfiles_on_user: PCMProfile_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`address_count` of type `Int!`
+  """
+  address_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`firstName_count` of type `Int!`
+  """
+  firstName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`lastName_count` of type `Int!`
+  """
+  lastName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`passwordHash_count` of type `Int!`
+  """
+  passwordHash_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`role_count` of type `Int!`
+  """
+  role_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`address` of type `String`
+  """
+  address: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: OrderDirection
+  """
+  ✨ Generated from Field `User`.`role` of type `String!`
+  """
+  role: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`address_count` of type `Int!`
+  """
+  address_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`firstName_count` of type `Int!`
+  """
+  firstName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastName_count` of type `Int!`
+  """
+  lastName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`passwordHash_count` of type `Int!`
+  """
+  passwordHash_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`role_count` of type `Int!`
+  """
+  role_count: OrderDirection
+}

@@ -1,0 +1,641 @@
+extend type Assignment {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Assignment", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Assignment` table.
+  """
+  _count: Int! @fdc_generated(from: "Assignment.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `adminNotes` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  adminNotes_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.adminNotes", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `assignmentDate` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  assignmentDate_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.assignmentDate", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `deploymentLocationId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  deploymentLocationId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.deploymentLocationId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `endDate` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  endDate_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.endDate", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `organizationAssigned` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  organizationAssigned_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.organizationAssigned", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `pcmProfileId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  pcmProfileId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.pcmProfileId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `startDate` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  startDate_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.startDate", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Assignment` table where the `status` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  status_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Assignment.status", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `assignmentDate` field in the `Assignment` table.
+  """
+  assignmentDate_min: Timestamp @fdc_generated(from: "Assignment.assignmentDate", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `endDate` field in the `Assignment` table.
+  """
+  endDate_min: Date @fdc_generated(from: "Assignment.endDate", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `startDate` field in the `Assignment` table.
+  """
+  startDate_min: Date @fdc_generated(from: "Assignment.startDate", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `assignmentDate` field in the `Assignment` table.
+  """
+  assignmentDate_max: Timestamp @fdc_generated(from: "Assignment.assignmentDate", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `endDate` field in the `Assignment` table.
+  """
+  endDate_max: Date @fdc_generated(from: "Assignment.endDate", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `startDate` field in the `Assignment` table.
+  """
+  startDate_max: Date @fdc_generated(from: "Assignment.startDate", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "Assignment.id", purpose: GLOBAL_ID)
+}
+extend type DeploymentLocation {
+  """
+  ✨ List `Assignment` objects in a one-to-many relationship (where `Assignment`.`deploymentLocation` is this object).
+  """
+  assignments_on_deploymentLocation(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Assignment_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Assignment_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Assignment_Having
+  ): [Assignment!]! @fdc_generated(from: "Assignment.deploymentLocation", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "DeploymentLocation", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table.
+  """
+  _count: Int! @fdc_generated(from: "DeploymentLocation.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `capacity` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  capacity_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.capacity", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `description` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  description_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.description", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `name` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  name_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.name", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `sector` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  sector_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.sector", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `DeploymentLocation` table where the `state` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  state_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "DeploymentLocation.state", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `capacity` field in the `DeploymentLocation` table.
+  """
+  capacity_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "DeploymentLocation.capacity", purpose: QUERY_SUM)
+  """
+  ✨ Average the `capacity` field in the `DeploymentLocation` table.
+  """
+  capacity_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "DeploymentLocation.capacity", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `capacity` field in the `DeploymentLocation` table.
+  """
+  capacity_min: Int @fdc_generated(from: "DeploymentLocation.capacity", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `capacity` field in the `DeploymentLocation` table.
+  """
+  capacity_max: Int @fdc_generated(from: "DeploymentLocation.capacity", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "DeploymentLocation.id", purpose: GLOBAL_ID)
+}
+extend type PCMProfile {
+  """
+  ✨ List `Assignment` objects in a one-to-many relationship (where `Assignment`.`pcmProfile` is this object).
+  """
+  assignments_on_pcmProfile(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Assignment_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Assignment_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Assignment_Having
+  ): [Assignment!]! @fdc_generated(from: "Assignment.pcmProfile", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  ✨ List `Preference` objects in a one-to-many relationship (where `Preference`.`pcmProfile` is this object).
+  """
+  preferences_on_pcmProfile(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Preference_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Preference_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Preference_Having
+  ): [Preference!]! @fdc_generated(from: "Preference.pcmProfile", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "PCMProfile", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table.
+  """
+  _count: Int! @fdc_generated(from: "PCMProfile.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `academicQualification` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  academicQualification_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.academicQualification", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `courseOfStudy` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  courseOfStudy_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.courseOfStudy", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `dateOfBirth` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  dateOfBirth_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.dateOfBirth", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `emergencyContactName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  emergencyContactName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.emergencyContactName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `emergencyContactNumber` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  emergencyContactNumber_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.emergencyContactNumber", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `gender` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  gender_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.gender", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `institutionAttended` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  institutionAttended_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.institutionAttended", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `medicalHistory` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  medicalHistory_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.medicalHistory", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `PCMProfile` table where the `userId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  userId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "PCMProfile.userId", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `dateOfBirth` field in the `PCMProfile` table.
+  """
+  dateOfBirth_min: Date @fdc_generated(from: "PCMProfile.dateOfBirth", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `dateOfBirth` field in the `PCMProfile` table.
+  """
+  dateOfBirth_max: Date @fdc_generated(from: "PCMProfile.dateOfBirth", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "PCMProfile.id", purpose: GLOBAL_ID)
+}
+extend type Preference {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Preference", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Preference` table.
+  """
+  _count: Int! @fdc_generated(from: "Preference.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `notes` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  notes_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.notes", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `pcmProfileId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  pcmProfileId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.pcmProfileId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `preferenceType` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  preferenceType_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.preferenceType", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `priority` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  priority_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.priority", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Preference` table where the `value` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  value_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Preference.value", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `priority` field in the `Preference` table.
+  """
+  priority_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Preference.priority", purpose: QUERY_SUM)
+  """
+  ✨ Average the `priority` field in the `Preference` table.
+  """
+  priority_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Preference.priority", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `priority` field in the `Preference` table.
+  """
+  priority_min: Int @fdc_generated(from: "Preference.priority", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `priority` field in the `Preference` table.
+  """
+  priority_max: Int @fdc_generated(from: "Preference.priority", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "Preference.id", purpose: GLOBAL_ID)
+}
+extend type User {
+  """
+  ✨ List `PCMProfile` objects in a one-to-many relationship (where `PCMProfile`.`user` is this object).
+  """
+  pCMProfiles_on_user(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: PCMProfile_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [PCMProfile_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: PCMProfile_Having
+  ): [PCMProfile!]! @fdc_generated(from: "PCMProfile.user", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "User", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `User` table.
+  """
+  _count: Int! @fdc_generated(from: "User.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `address` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  address_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.address", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `email` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  email_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.email", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `firstName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  firstName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.firstName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `lastName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  lastName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.lastName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `passwordHash` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  passwordHash_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.passwordHash", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `phoneNumber` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  phoneNumber_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.phoneNumber", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `role` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  role_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.role", purpose: QUERY_COUNT)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "User.id", purpose: GLOBAL_ID)
+}

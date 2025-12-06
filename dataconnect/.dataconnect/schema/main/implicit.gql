@@ -1,0 +1,46 @@
+extend type Assignment {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Assignment", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`deploymentLocation`. It must match the value of `DeploymentLocation`.`id`. See `@ref` for how to customize it.
+  """
+  deploymentLocationId: UUID! @fdc_generated(from: "Assignment.deploymentLocation", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Assignment`.`pcmProfile`. It must match the value of `PCMProfile`.`id`. See `@ref` for how to customize it.
+  """
+  pcmProfileId: UUID! @fdc_generated(from: "Assignment.pcmProfile", purpose: IMPLICIT_REF_FIELD)
+}
+extend type DeploymentLocation {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "DeploymentLocation", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type PCMProfile {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "PCMProfile", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `PCMProfile`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "PCMProfile.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Preference {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Preference", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Preference`.`pcmProfile`. It must match the value of `PCMProfile`.`id`. See `@ref` for how to customize it.
+  """
+  pcmProfileId: UUID! @fdc_generated(from: "Preference.pcmProfile", purpose: IMPLICIT_REF_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}
